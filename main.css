@@ -37,6 +37,14 @@ h4 {
     color: #f1f1f1;
 }
 
+img {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    border: 6px solid #363636;
+}
+
+
 @media (max-width: 500px) {
     body {
         padding: 20px;
