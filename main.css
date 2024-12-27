@@ -37,7 +37,7 @@ h4 {
     color: #f1f1f1;
 }
 
-@media (min-width: 500px) {
+@media (max-width: 500px) {
     body {
         padding: 20px;
         justify-content: flex-start;
