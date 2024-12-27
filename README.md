@@ -1,1 +1,5 @@
-## Marek Tymowski
+## Marek Tymowski - portfolio
+
+#### Pisarz amator, Specjalista SEO, CopyWriter
+
+
