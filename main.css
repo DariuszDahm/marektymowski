@@ -36,3 +36,12 @@ h4 {
 .social a:hover {
     color: #f1f1f1;
 }
+
+@media (min-width: 500px) {
+    body {
+        padding: 20px;
+        justify-content: flex-start;
+        text-align: center;
+    }
+
+  }
