@@ -8,10 +8,42 @@ description: Marek Tymowski - Pisarz amator, Specjalista SEO, CopyWriter, Market
 
 <body>
 
-    <img src="/assets/img/martym-logo-250x250.webp" alt="Marek Tymowski">
+    <dialog id="modal">
+        
+    <h2>Marek Tymowski</h2>
+    <p><em>Marek Tymowski</em> to specjalista SEO ( ang. Search Engine Optimization ) ze świeżym podejściem do marketingu sieciowego oraz reklam na stronach internetowych.</p>
+    <p><em>Marek Tymowski</em> to również pisarz amator piszący raczej dla siebie i do tzw. "szuflady".</p>
+    <p>Jego opowiadania to zbiór jego przemyśleń, bolączek oraz nastrojów które przelewa na internetowy papier.</p><p>Opowiadania Tymowskiego to teksty z pogranicza fantazji chorego umysłu autora, stanowiące obraz jego zainteresowań, fascynacji oraz frustracji.</p>
+    <p><em>Zainteresowany? To poszukaj w sieci jego opowiadań. Jak znajdziesz pewnie nie pożałujesz, chociaż możę ...</em></p>
+
+    <form method="dialog">
+        <button>Zamknij</button>
+    </form>
+
+    </dialog>
+
+    <dialog id="modal2">
+
+        <h2>Marek Tymowski</h2>
+
+        <p>Jeżeli chcesz się skontaktować z Markiem Tymowskim to wiesz co robić.</p>
+        <p><strong>Pamiętaj,</strong> że jest specjalne miejsce w piekle dla spamerów.</p>
+        <p><em>Marek Tymowski</em> skontaktuje się z Tobą w możliwe najkrótszym czasie. Jednak nie ma pewności, że dostaniesz jakąkolwiek odpowiedź kiedykolwiek.</p>
+         <h3>Dane kontaktowe:</h3>
+        <p><i class="fa-solid fa-at"></i> marektymowski(małpa)gmail.com</p>
+        <p><i class="fa-brands fa-whatsapp"></i>  WhatsApp 667 586 917</p>
+         <p><i class="fa-solid fa-location-dot"></i> Toruń, woj. kujwasko-pomorskie, Polska</p>   
+
+        <form method="dialog">
+        <button>Zamknij</button>
+    </form>
+    </dialog>
+
+
+    <img src="/assets/img/martym-logo-250x250.webp" alt="Marek Tymowski" onclick="modal.show()">
     <h1>Marek Tymowski - Pisarz</h1>
-    <h4>Pisarz amator, Specjalista SEO, CopyWriter,<br> pasjonat nowoczesnych technologii i Smart Homei</h4>
-    <div class="contact">marektymowski(at)gmail.com</div>
+    <h4>Pisarz amator, Specjalista SEO, CopyWriter,<br> pasjonat nowoczesnych technologii i Smart Home</h4>
+    <div class="contact" onclick="modal2.show()">marektymowski(at)gmail.com</div>
 
     <div class="social">
 
@@ -22,7 +54,7 @@ description: Marek Tymowski - Pisarz amator, Specjalista SEO, CopyWriter, Market
     
     </div>
 
-    <div class="footer">&copy {{ "now" | date: "%Y" }} <em><a href="https://tymowski.tk">Tymowski<span>.</span></a></em></div>
+    <div class="footer">&copy {{ "now" | date: "%Y" }} <em><a href="https://tymowski.tk" target="_blank">Tymowski<span>.</span></a></em></div>
     
 </body>
 </html>
