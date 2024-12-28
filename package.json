@@ -1,0 +1,13 @@
+{
+  "name": "marektymowski",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "js": "bundle exec jekyll s --livereload",
+    "": "bundle exec jekyll build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

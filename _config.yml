@@ -1,0 +1,43 @@
+lang: pl
+
+title: Marek Tymowski - Pisarz amator
+description: Marek Tymowski - Pisarz amator, Specjalista SEO, CopyWriter, Marketing Internetiwy oraz nowoczesne technologie
+
+author:  
+  name:    Marek Tymowski
+  email:   marek-tymowski@gmail.com
+
+baseurl:   ""
+url:       ""
+
+# Social media linki
+twitter_username:   
+github_username:    
+facebook_username:  
+instagram_username:  
+linkedin_username:
+
+# Google-analytics 
+google_analytics:    
+
+
+markdown:           kramdown
+
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-sitemap 
+  - jekyll-seo-tag
+  - jekyll-minifier
+
+sass:
+    style: compressed  
+
+include:
+  - .htaccess
+
+exclude:
+  - README.md
+  - package.json 
+  - CNAME   
+
