@@ -8,7 +8,7 @@ description: Marek Tymowski - Pisarz amator, Specjalista SEO, CopyWriter, Market
 
 <body>
 
-    <dialog id="modal">
+    <dialog id="modalAbout">
         
     <h2>Marek Tymowski</h2>
     <p><em><strong>Marek Tymowski</strong></em> to specjalista SEO ( ang. Search Engine Optimization ) ze świeżym podejściem do marketingu sieciowego oraz reklam na stronach internetowych.</p>
@@ -22,7 +22,7 @@ description: Marek Tymowski - Pisarz amator, Specjalista SEO, CopyWriter, Market
 
     </dialog>
 
-    <dialog id="modal2">
+    <dialog id="modalContact">
 
         <h2>Marek Tymowski</h2>
 
@@ -40,11 +40,29 @@ description: Marek Tymowski - Pisarz amator, Specjalista SEO, CopyWriter, Market
     </form>
     </dialog>
 
+    <dialog id="modalInfo">
 
-    <img src="/assets/img/martym-logo-250x250.webp" alt="Marek Tymowski" onclick="modal.show()">
+        <h2>Informacje</h2>
+        <p>Wszystkie prawa zastrzeżone</p>
+        <p>Kopiowanie i rozpowszechnianie w całości lub fragmentach materiałów na tej stronie bez zgody autora <strong>zabronione</strong>.</p>
+        <p>Korzystając ze strony użytkownik wyraża zgodę na używanie plików cookies, zgodnie z bieżącymi ustawieniami przegladarki.</p>
+
+        <h5>Cookies (ciasteczka)  &middot; <a href="https://wszystkoociasteczkach.pl/" target="_blank">czytaj więcej...</a> </h5>
+
+        <p>Niektóre obszary serwisów mogą wykorzystywać cookies, czyli małe pliki tekstowe wysyłane do komputera internauty identyfikujące go w sposób potrzebny do uproszczenia lub umorzenia danej operacji.</p> 
+        <p>Cookies są nieszkodliwe ani dla komputera ani dla jego użytkownika i jego danych.</p>
+        <p class="copyright">Projekt i realizacja: <a href="https://dahm.com.pl" target="_blank">Dariusz Dahm</a></p>
+
+    <form method="dialog">
+        <button>Zamknij</button>
+    </form>    
+    </dialog>
+
+
+    <img src="/assets/img/martym-logo-250x250.webp" alt="Marek Tymowski" onclick="modalAbout.show()">
     <h1>Marek Tymowski - Pisarz</h1>
     <h4>Pisarz amator, Specjalista SEO, CopyWriter,<br> pasjonat nowoczesnych technologii i Smart Home</h4>
-    <div class="contact" onclick="modal2.show()">marektymowski(at)gmail.com</div>
+    <div class="contact" onclick="modalContact.show()">marektymowski(małpa)gmail.com</div>
 
     <div class="social">
 
@@ -55,7 +73,12 @@ description: Marek Tymowski - Pisarz amator, Specjalista SEO, CopyWriter, Market
     
     </div>
 
-    <div class="footer">&copy {{ "now" | date: "%Y" }} <em><a href="https://tymowski.tk" target="_blank">Marek Tymowski<span>.</span></a></em>
+    <div class="footer">
+    &copy {{ "now" | date: "%Y" }} 
+    <!-- &middot; <em><a href="https://tymowski.tk" target="_blank"> Tymowski<span>.</span></a></em> -->
+    &middot; <span onclick="modalAbout.show()">O autorze</span> 
+    &middot; <span onclick="modalInfo.show()">Info</span> 
+    &middot; <span onclick="modalContact.show()">Kontakt</span> 
     </div>
 </body>
 </html>

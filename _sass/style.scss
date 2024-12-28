@@ -7,7 +7,7 @@ body  {
     align-items: center;
     min-height: 90vh;
 
-    #modal, #modal2 {
+    #modalAbout, #modalContact, #modalInfo {
         position: absolute;
         left: 0;
         top: 10px;
@@ -48,7 +48,7 @@ body  {
         }
 
     }
-    #modal2 {
+    #modalContact {
         i {
             margin-right: 10px;
         }
@@ -67,6 +67,22 @@ body  {
             }
         }
 
+    }
+    #modalInfo {
+
+         a {
+                color: #bebdbd;
+                outline: none;
+                text-decoration: underline;
+
+                &:hover {
+                    color: #5e5e5e;
+                }
+            }
+
+        .copyright {
+            padding-top: 20px;
+        }
     }
    
     a {
@@ -135,6 +151,10 @@ body  {
         color: #363636;
         padding-top: 15px;
         border-top: 1px solid #363636;
+
+        span {
+            cursor: pointer;
+        }
                
         a {
             color: #363636;
