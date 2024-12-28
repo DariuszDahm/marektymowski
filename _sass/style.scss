@@ -48,6 +48,7 @@ body  {
     }
     .social a {
         color: #363636;
+        transition: all .5s ease-in-out;
     }
     .social a:hover {
         color: #f1f1f1;
@@ -70,10 +71,13 @@ body  {
         a {
             color: #363636;
             text-decoration: none;
+            transition: all .6s ease-in-out;
 
             &:hover {
                 color: #f1f1f1;
+                text-decoration: underline;
             }
+             
         }
     }
 }

@@ -1,4 +1,3 @@
-# Ustawienie nagłówków Cache-Control
 <IfModule mod_expires.c>
   ExpiresActive On
   ExpiresDefault "access plus 1 month"
@@ -11,10 +10,10 @@
   ExpiresByType image/svg+xml "access plus 1 year"
   ExpiresByType image/webp "access plus 1 year"
 
-  # CSS i JavaScript - przechowywanie przez miesiąc
-  ExpiresByType text/css "access plus 1 month"
-  ExpiresByType application/javascript "access plus 1 month"
-  ExpiresByType application/x-javascript "access plus 1 month"
+  # CSS i JavaScript - przechowywanie przez 1 rok
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType application/x-javascript "access plus 1 year"
 
   # Czcionki - przechowywanie przez 6 miesięcy
   ExpiresByType font/woff "access plus 6 months"
@@ -32,4 +31,17 @@
   AddOutputFilterByType DEFLATE application/x-javascript
   AddOutputFilterByType DEFLATE application/xml
   AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+# Cache-Control dla nowoczesnych przeglądarek
+<IfModule mod_headers.c>
+  # CSS i JS - max-age = 1 rok
+  <FilesMatch "\.(css|js|woff|woff2|webp)$">
+    Header set Cache-Control "max-age=31536000, public"
+  </FilesMatch>
+
+  # HTML - must-revalidate
+  <FilesMatch "\.(html|htm)$">
+    Header set Cache-Control "max-age=86400, must-revalidate"
+  </FilesMatch>
 </IfModule>
