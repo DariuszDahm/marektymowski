@@ -7,6 +7,19 @@ body  {
     align-items: center;
     min-height: 90vh;
    
+    a {
+        color: #363636;
+        text-decoration: none;
+
+        &:hover {
+            color: #f1f1f1;
+        }
+    }
+
+    .btn {
+        text-transform: capitalize;
+        margin-top: 20px;
+    }
 
     h1 {
         font-size: 38px;

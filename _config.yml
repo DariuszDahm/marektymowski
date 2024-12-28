@@ -8,7 +8,7 @@ author:
   email: marek-tymowski@gmail.com
 
 baseurl: ""
-url: ""
+url: "https://marektymowski.tk"
 
 # Social media linki
 twitter_username:
@@ -40,7 +40,7 @@ compress_html:
   blanklines: false
   ignore:
     #envs: [development]
-    envs: [local]
+    #envs: [local]
 
 include:
   - .htaccess
