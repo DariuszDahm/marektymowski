@@ -56,6 +56,17 @@ body  {
             border-bottom: 1px solid #363636;
             padding-bottom: 5px;
         }
+        a {
+            color: #bebdbd;
+            text-decoration: none;
+            outline: none;
+            transition: all .4s ease-in-out;
+
+            &:hover{
+                color: #5e5e5e;
+            }
+        }
+
     }
    
     a {
@@ -119,10 +130,10 @@ body  {
         }
     }
     .footer {
-        margin-top: 40px;
+        margin-top: 20px;
         font-size: 14px;
         color: #363636;
-        padding-top: 20px;
+        padding-top: 15px;
         border-top: 1px solid #363636;
                
         a {
