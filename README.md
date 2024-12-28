@@ -1,19 +1,27 @@
-## Marek Tymowski - Pisarz
+# Marek Tymowski - Pisarz
 
 ![Marek Tymowski](/assets/img/martym-logo-250x250.webp)
 
-# Pisarz amator, Specjalista SEO, CopyWriter
+---
 
- #### Pisarz amator, Specjalista SEO, CopyWriter,<br> pasjonat nowoczesnych technologii i Smart Homei
-    <div class="contact">marektymowski(at)gmail.com</div>
+#### Pisarz amator, Specjalista SEO, CopyWriter
+#### Pisarz amator, Specjalista SEO, CopyWriter,<br> pasjonat nowoczesnych technologii i Smart Homei
+
+---
+[linkedin](https://www.linkedin.com/in/marek-tymowski/) [Facebook](https://www.facebook.com/Marek.Tymowski/)
+[X](https://x.com/MarekTymowski/)
+[Instagram](https://www.instagram.com/mediatym/)
 
 
-        <a href="https://www.linkedin.com/in/marek-tymowski/" target="_blank"><i class="fas fa-brands fa-linkedin fa-3x"></i></a>
-        <a href="https://www.facebook.com/Marek.Tymowski/" target="_blank"><i class="fa-brands fa-square-facebook fa-3x"></i></a>
-        <a href="https://x.com/MarekTymowski/" target="_blank"><i class="fa-brands fa-square-x-twitter fa-3x"></i></a>
-        <a href="https://www.instagram.com/mediatym/" target="_blank"><i class="fa-brands fa-square-instagram fa-3x"></i></a>
-    
+---
 
-    <div class="footer">&copy {{ "now" | date: "%Y" }} <em><a href="https://tymowski.tk">Marek Tymowski</a></em></div>
+
+© 2024 [tymowski.tk](https://tymowski.tk)
+          
+        
+        
+        
+
+  
 
 
