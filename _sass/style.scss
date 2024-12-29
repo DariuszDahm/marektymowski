@@ -1,190 +1,228 @@
-body  {
-    color: #f1f1f1;
+body {
+  color: #f1f1f1;
+  background-color: #222;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+
+  dialog {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.6s ease, transform 9.6s ease;
+    animation: dialogClose 0.6s forwards;
+
+    &[open] {
+      pointer-events: auto;
+      animation: dialogOpen 0.9s forwards;
+    }
+  }
+
+  #modalAbout,
+  #modalContact,
+  #modalInfo {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    z-index: 1;
     background-color: #222;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 90vh;
+    color: #bebdbd;
+    border-radius: 8px;
+    border: 2px solid #5e5e5e;
+    width: 300px;
 
-    #modalAbout, #modalContact, #modalInfo {
-        position: absolute;
-        left: 0;
-        top: 10px;
-        z-index: 1;
-        background-color: #222;
-        color: #bebdbd;
-        border-radius: 8px;
-        border: 2px solid #5e5e5e;
-        animation: animacja1;
-        animation-duration: .4s;
-        width: 300px;
-
-        form {
-            padding-top: 10px;
-            border-top: 1px solid #363636;
-        }
-
-        button {
-            background-color: #363636;
-            padding: 3px 20px;
-            border-radius: 4px;
-            border: 1px solid #363636;
-            color: #bebdbd;
-            outline: none;
-            cursor: pointer;
-            float: right;
-            transition: all .4s ease-in-out;
-
-            &:hover {
-                background-color: #5e5e5e;
-            }
-
-        }
-
-        @keyframes animacja1 {
-                from {top: -200px;}
-                to {top: 10px;}
-        }
-
+    form {
+      padding-top: 10px;
+      border-top: 1px solid #363636;
     }
-    #modalContact {
-        i {
-            margin-right: 10px;
-        }
-        h3 {
-            border-bottom: 1px solid #363636;
-            padding-bottom: 5px;
-        }
-        a {
-            color: #bebdbd;
-            text-decoration: none;
-            outline: none;
-            transition: all .4s ease-in-out;
 
-            &:hover{
-                color: #5e5e5e;
-            }
-        }
+    button {
+      background-color: #363636;
+      padding: 3px 20px;
+      border-radius: 4px;
+      border: 1px solid #363636;
+      color: #bebdbd;
+      outline: none;
+      cursor: pointer;
+      float: right;
+      transition: all 0.4s ease-in-out;
 
+      &:hover {
+        background-color: #5e5e5e;
+      }
     }
-    #modalInfo {
-
-         a {
-                color: #bebdbd;
-                outline: none;
-                text-decoration: underline;
-
-                &:hover {
-                    color: #5e5e5e;
-                }
-            }
-
-        .copyright {
-            padding-top: 20px;
-        }
+  }
+  #modalContact {
+    i {
+      margin-right: 10px;
     }
-   
+    h3 {
+      border-bottom: 1px solid #363636;
+      padding-bottom: 5px;
+    }
     a {
-        color: #363636;
-        text-decoration: none;
+      color: #bebdbd;
+      text-decoration: none;
+      outline: none;
+      transition: all 0.4s ease-in-out;
 
-        &:hover {
-            color: #f1f1f1;
-        }
+      &:hover {
+        color: #5e5e5e;
+      }
+    }
+  }
+  #modalInfo {
+    a {
+      color: #bebdbd;
+      outline: none;
+      text-decoration: underline;
+
+      &:hover {
+        color: #5e5e5e;
+      }
     }
 
-    .btn {
-        text-transform: capitalize;
-        margin-top: 20px;
+    .copyright {
+      padding-top: 20px;
     }
+  }
 
-    h1, h2 {
-        font-size: 38px;
-        letter-spacing: 2px;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        text-shadow: 0px 0px 20px #bebdbd;
+  a {
+    color: #676767;
+    text-decoration: none;
+
+    &:hover {
+      color: #f1f1f1;
     }
-    h4 {
-        letter-spacing: 3px;
-        font-size: 18px;
-        text-align: center;
-        text-transform: capitalize;
-    }
-    .contact {
-        letter-spacing: 2px;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        color: #363636;
-        border-bottom: 1px solid #363636;
-        padding-bottom: 10px;
-        cursor: pointer;
-    }
-    .social {
-        margin-top: 20px;
-    }
-    .social a i {
+  }
+
+  .btn {
+    text-transform: capitalize;
+    margin-top: 20px;
+
+  }
+
+  h1,
+  h2 {
+    font-size: 38px;
+    letter-spacing: 2px;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    text-shadow: 0px 0px 20px #bebdbd;
+  }
+  h4 {
+    letter-spacing: 3px;
+    font-size: 18px;
+    text-align: center;
+    text-transform: capitalize;
+  }
+  .contact {
+    letter-spacing: 2px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    color: #676767;
+    border-bottom: 1px solid #363636;
+    padding-bottom: 10px;
+    cursor: pointer;
+  }
+  .social {
+    margin-top: 20px;
+  }
+  .social a i {
     margin-right: 10px;
+  }
+  .social a {
+    color: #676767;
+    transition: all 0.5s ease-in-out;
+  }
+  .social a:hover {
+    color: #f1f1f1;
+  }
+
+  img {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    border: 6px solid #363636;
+    box-shadow: 1px 1px 30px #5e5e5e;
+
+    &:hover {
+      filter: grayscale(100%);
+      cursor: pointer;
     }
-    .social a {
-        color: #363636;
-        transition: all .5s ease-in-out;
+  }
+  .footer {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #676767;
+    padding-top: 15px;
+    border-top: 1px solid #363636;
+    text-align: center;
+
+    .copy_footer {
+      display: inline-block;
+      margin-top: 10px;
     }
-    .social a:hover {
+
+    span {
+      cursor: pointer;
+      transition: color 0.4s ease-in-out;
+
+      &:hover {
+        color: #bebdbd;
+      }
+    }
+
+    a {
+      color: #676767;
+      text-decoration: none;
+      transition: all 0.6s ease-in-out;
+
+      &:hover {
         color: #f1f1f1;
+        text-decoration: underline;
+      }
     }
-
-    img {
-        width: 200px;
-        height: 200px;
-        border-radius: 100%;
-        border: 6px solid #363636;
-        box-shadow: 1px 1px 30px #5e5e5e;
-
-        &:hover {
-            filter: grayscale(100%);
-            cursor: pointer;
-        }
-    }
-    .footer {
-        margin-top: 20px;
-        font-size: 14px;
-        color: #363636;
-        padding-top: 15px;
-        border-top: 1px solid #363636;
-
-        span {
-            cursor: pointer;
-        }
-               
-        a {
-            color: #363636;
-            text-decoration: none;
-            transition: all .6s ease-in-out;
-
-            &:hover {
-                color: #f1f1f1;
-                text-decoration: underline;
-            }
-             
-        }
-    }
-    .abc {
-        font-size: 12px;
-        color: #363636;
-        position: absolute;
-        bottom: 10px;
-        right: 10px;
-    }
+  }
+  .abc {
+    font-size: 12px;
+    color: #363636;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
 }
 
 @media (max-width: 500px) {
-    body {
-        padding: 20px;
-        margin-top: 40px;
-        justify-content: flex-start;
-    }
-    h1, h4 {
-        text-align: center;
+  body {
+    padding: 20px;
+    margin-top: 40px;
+    justify-content: flex-start;
+  }
+  h1,
+  h4 {
+    text-align: center;
+  }
+}
 
+/* animacje ***********************/
+@keyframes dialogOpen {
+  from {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(10px);
+    opacity: 1;
+  }
+}
+
+@keyframes dialogClose {
+  from {
+    transform: translateY(10px);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-200px);
+    opacity: 0;
   }
 }

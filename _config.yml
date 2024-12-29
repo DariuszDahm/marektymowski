@@ -18,7 +18,7 @@ instagram_username:
 linkedin_username:
 
 # Google-analytics
-google_analytics:
+google_analytics: G-XDELT52PPS
 
 markdown: kramdown
 
@@ -49,3 +49,4 @@ exclude:
   - README.md
   - package.json
   - CNAME
+  - /doc/

@@ -1,0 +1,69 @@
+---
+layout: default
+title: Blog
+description: Wpisy na blogu
+index: noindex, nofollow
+---
+
+<img class="img_blog" src="/assets/img/blog .webp" alt="Marek Tymowski - blog">
+
+<h2>{{ page.title }}</h2>
+<h4>Już wkrótce nowa odsłona niesamowitego bloga</h4>
+
+{% for post in paginator.posts %}
+
+<div class="post-preview">
+  <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
+    <h2 class="post-title">{{ post.title }}</h2>
+    {% if post.subtitle %}
+    <h3 class="post-subtitle">{{ post.subtitle }}</h3>
+    {% else %}
+    <h3 class="post-subtitle">
+      {{ post.excerpt | strip_html | truncatewords: 15 }}
+    </h3>
+    {% endif %}
+  </a>
+  <p class="post-meta">
+    Autor &middot; {% if post.author %} {{ post.author }} {% else %} {{
+    site.author.name }} {% endif %} &middot; {{ post.date | polish_date }}
+    &middot; {% include read_time.html content=post.content %}
+  </p>
+</div>
+
+{% endfor %}
+
+<!-- Pager -->
+{% if paginator.total_pages > 1 %}
+
+<div class="clearfix">
+  {% if paginator.previous_page %}
+  <a
+    class="btn btn-primary"
+    href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"
+    >&larr; Nowsze<span class="d-none d-md-inline"> Wpisy</span></a
+  >
+  {% endif %} {% if paginator.next_page %}
+  <a
+    class="btn btn-primary"
+    style="float: right"
+    href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"
+    >Starsze<span class="d-none d-md-inline"> Posts</span> &rarr;</a
+  >
+  {% endif %}
+</div>
+
+{% endif %}
+
+<div class="btn"><a href="/"><i class="fa-solid fa-reply"></i> wróc do strony głównej</a></div>
+
+<div class="footer">
+
+  <div class="copy_footer">
+    &copy {{ "now" | date: "%Y" }} &middot;
+    <em
+      ><a href="https://tymowski.tk" target="_blank">
+        Tymowski<span>.</span></a
+      ></em
+    >
+  </div>
+</div>
